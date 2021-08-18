@@ -1,0 +1,18 @@
+#botao{
+    float:right;
+    margin-left: 1070px;
+    
+    
+}
+
+#logo{
+    padding-top: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+#logo img{
+    max-width: 100%;
+    display: block;
+    margin:0 auto;
+}
