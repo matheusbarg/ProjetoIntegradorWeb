@@ -152,6 +152,11 @@ export default function PersistentDrawerLeft() {
         <Button variant="contained" color="primary">Cadastro de Usúarios</Button></a>
       
         </List>
+        <List>
+        <a href="http://localhost:3000/cadastroColaboradores">
+        <Button variant="contained" color="primary">Cadasrtro Colaboradores</Button></a>
+      
+        </List>
         <Divider />
         
       </Drawer>
