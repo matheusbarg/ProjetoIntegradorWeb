@@ -5,7 +5,7 @@ import menu from './paginas/menu';
 import login from './paginas/login/Login';
 import TelaInicial from './paginas/TelaInicial/telaInicial';
 import ListaUsuarios from './paginas/listagemUsuarios/listagemUsuario';
-import CadastroColaborador from "./paginas/CadastroColaborador/cadastroColaborador";
+import CadastroGrupo from "./paginas/CadastroGrupo/cadastroGrupo";
 
 
 function Routes() {
@@ -17,7 +17,7 @@ function Routes() {
         <Route  path="/menu" component={menu} />
         <Route  path="/TelaInicial" component={TelaInicial} />
         <Route  path="/ListaUsuarios" component={ListaUsuarios} />
-        <Route  path="/CadastroColaboradores" component={CadastroColaborador} />
+        <Route  path="/CadastroGrupo" component={CadastroGrupo} />
       
        
        

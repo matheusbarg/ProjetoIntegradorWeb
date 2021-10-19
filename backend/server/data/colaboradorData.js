@@ -13,5 +13,5 @@ exports.deleteColaborador = function(colaboradorID){
 }
 
 exports.saveColaborador = function(colaborador){
-    return database.one('insert into colaboradores (nome,email,funcao,telefone,foto) values ($1,$2,$3,$4,$5) returning *',
-    [colaborador.nome,colaborador.email,colaborador.telefone,colaborador.funcao,colaborador.foto])};
+    return database.one('insert into colaboradores (nome,tempoOcioso) values ($1,$2) returning *',
+    [colaborador.nome,colaborador.tempoOcioso])};

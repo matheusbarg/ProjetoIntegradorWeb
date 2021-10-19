@@ -45,8 +45,9 @@ export default function CadastroUsuario() {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-    const [telefone, setTelefone] = useState('');
-    const [foto, setFoto] = useState('');
+    const [usuario, setUsuario] = useState('');
+    const [grupo, setGrupo] = useState('');
+      
     
     async function handleCadastro(e) {
         e.preventDefault();
@@ -56,8 +57,8 @@ export default function CadastroUsuario() {
             nome,
             email,
             senha,
-            telefone,
-            foto
+            usuario,
+            
             
         };
 
@@ -107,7 +108,21 @@ export default function CadastroUsuario() {
                 onChange={e => setNome(e.target.value)}
               />
             </Grid>
-            
+
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="usuario"
+                type="text"
+                label="Usuario"
+                value={usuario}
+                name="usuario"
+                onChange={e => setUsuario(e.target.value)}
+                        
+              />
+            </Grid>           
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
@@ -139,36 +154,23 @@ export default function CadastroUsuario() {
                 onChange={e => setSenha(e.target.value)}
               />
             </Grid>
+            
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
                 required
                 fullWidth
-                id="telefone"
-                type="phone"
-                label="telefone"
-                value={telefone}
-                name="telefone"
-                placeholder="999-99999"
-                autoComplete="senha"
-                onChange={e => setTelefone(e.target.value)}
-                        
+                id="Grupo"
+                value={grupo}
+                type="number"
+                label="Grupo"
+                name="Grupo"
+                onChange={e => setGrupo(e.target.value)}
+                
+            
               />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="foto"
-                type="text"
-                label="Link Foto"
-                value={foto}
-                name="foto"
-                onChange={e => setFoto(e.target.value)}
-                        
-              />
-            </Grid>
+            
+            
           </Grid>
           <Button
             type="submit"
@@ -181,12 +183,10 @@ export default function CadastroUsuario() {
             Cadastrar
           </Button>
           <Grid container justify="flex-end">
-            <Grid item>
-             
-            </Grid>
+           </Grid> 
           </Grid>
          
-        </form>
+       </form>
       </div>
       <Box mt={5}>
      

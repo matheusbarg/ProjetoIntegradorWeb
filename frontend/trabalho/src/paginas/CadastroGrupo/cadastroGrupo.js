@@ -39,14 +39,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CadastroColaborador() {
+export default function CadastroGrupo() {
   const classes = useStyles();
   const [codigo, setID] = useState('');
     const [nome, setNome] = useState('');
-    const [email, setEmail] = useState('');
-    const [telefone, setTelefone] = useState('');
-    const [funcao, setFuncao] = useState('');
-    const [foto, setFoto] = useState('');
+    const [tempoOcioso, setTempoOcioso] = useState('');
     
     async function handleCadastro(e) {
         e.preventDefault();
@@ -54,10 +51,7 @@ export default function CadastroColaborador() {
         const dados = {
             codigo,
             nome,
-            email,
-            funcao,
-            telefone,
-            foto
+            tempoOcioso
             
         };
 
@@ -66,12 +60,12 @@ export default function CadastroColaborador() {
             const response = await api.put('colaboradores', dados);
             const id = response.data.id;
             console.log(response.data);
-            alert("Colaborador cadastrado com sucesso");
+            alert("Grupo cadastrado com sucesso");
           window.open("http://localhost:3000/","_self");
            
            
         } catch (error) {
-            alert("Erro ao cadastro colaborador " + error.message);            
+            alert("Erro ao cadastro grupo " + error.message);            
         }
     }
   
@@ -89,7 +83,7 @@ export default function CadastroColaborador() {
         
         <form  method ="post "name ="form" className={classes.form} noValidate onSubmit={handleCadastro}>
         <Typography component="h1" variant="h5" >
-          Cadastrar Colaborador
+          Cadastrar Grupo
         </Typography>
           <Grid container spacing={3}>
         
@@ -107,70 +101,21 @@ export default function CadastroColaborador() {
                 onChange={e => setNome(e.target.value)}
               />
             </Grid>
-            
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="email"
-                value={email}
-                label="Email"
-                name="email"
-                placeholder="email@seudominio.com"
-                autoComplete="email"
-                onChange={e => setEmail(e.target.value)}
-                
-            
-              />
-              
-            </Grid>
-            
             <Grid item xs={12} > 
               <TextField
                 autoComplete="fname"
-                name="Funcao"
+                name="tempoOcioso"
                 variant="outlined"
                 required
                 fullWidth
-                id="funcao"
-                value={funcao}
-                label="Função"
-              
-                onChange={e => setFuncao(e.target.value)}
+                id="tempoOcioso"
+                value={tempoOcioso}
+                label="Tempo Ocioso"
+                autoFocus
+                onChange={e => setTempoOcioso(e.target.value)}
               />
             </Grid>
             
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="telefone"
-                type="phone"
-                label="telefone"
-                value={telefone}
-                name="telefone"
-                placeholder="999-99999"
-                autoComplete="senha"
-                onChange={e => setTelefone(e.target.value)}
-                        
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="foto"
-                type="text"
-                label="Link Foto"
-                value={foto}
-                name="foto"
-                onChange={e => setFoto(e.target.value)}
-                        
-              />
-            </Grid>
           </Grid>
           <Button
             type="submit"

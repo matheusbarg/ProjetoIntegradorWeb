@@ -71,7 +71,6 @@ export default function ListaUsuarios() {
         <TableHead>
        
           <TableRow>
-          <StyledTableCell  align="right">Foto</StyledTableCell >
             <StyledTableCell  align="right">Nome</StyledTableCell >
             <StyledTableCell  align="right">Email</StyledTableCell >
             <StyledTableCell  align="right">Telefone</StyledTableCell >
@@ -81,7 +80,7 @@ export default function ListaUsuarios() {
         <TableBody>
           {usuario.map(usuario => (
             <StyledTableRow  key={usuario.id}>
-              <StyledTableCell>  <img src={usuario.foto}  width="100" height="100" margin-left="10px" /> </StyledTableCell >
+          
               <StyledTableCell  align="right">{usuario.nome}</StyledTableCell >
               <StyledTableCell  align="right">{usuario.email}</StyledTableCell >
               <StyledTableCell  align="right">{usuario.telefone}</StyledTableCell >

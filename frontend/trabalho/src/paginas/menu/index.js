@@ -142,8 +142,11 @@ export default function PersistentDrawerLeft() {
         <Button variant="contained" color="primary">Dashboards</Button>
         </List>
         <List>
-        <a href="http://localhost:3000/ListaUsuarios">
-        <Button variant="contained" color="primary">Colaboradores</Button></a>
+        <List>
+        <a href="http://localhost:3000/cadastroGrupo">
+        <Button variant="contained" color="primary">Cadasrtro de Grupo</Button></a>
+      
+        </List>
       
         </List>
         
@@ -152,12 +155,7 @@ export default function PersistentDrawerLeft() {
         <Button variant="contained" color="primary">Cadastro de Usúarios</Button></a>
       
         </List>
-        <List>
-        <a href="http://localhost:3000/cadastroColaboradores">
-        <Button variant="contained" color="primary">Cadasrtro Colaboradores</Button></a>
-      
-        </List>
-        <Divider />
+                <Divider />
         
       </Drawer>
      <main>
