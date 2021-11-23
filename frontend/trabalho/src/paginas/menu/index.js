@@ -159,7 +159,8 @@ export default function PersistentDrawerLeft() {
         
       </Drawer>
      <main>
-       
+     <h1>Relatórios</h1>
+     <iframe width="1024" height="804" src="https://app.powerbi.com/view?r=eyJrIjoiMjZiYTc1NjktOWQxZS00YzI3LWJkNjgtMDk2NTA1YWRhNTY2IiwidCI6IjJjZjdkNGQ1LWJkMWItNDk1Ni1hY2Y4LTI5OTUzOTliMjE2OCJ9&pageName=ReportSection41318c969ee13ffa7ae3" frameborder="0" allowFullScreen="true"></iframe>
        </main>
     </div>
   );
